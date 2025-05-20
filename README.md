@@ -776,3 +776,15 @@ Practical Applications:
 Query: User profile lookups, order history
 
 Scan: Backoffice reports (schedule during low-traffic periods)
+
+
+19/05/2025
+empresas tem varias redes, a rede é isolador, isso significa que as redes não falam uma com a outra, sem as VPCS.
+Hubspoke, é a VPC oque fala com hub,que é  é um ponto central que conecta vários elementos ou dispositivos, permitindo a comunicação e o fluxo de informações entre eles.
+AES transit gateway: O AWS Transit Gateway é um serviço da Amazon Web Services que permite interconectar VPCs (Virtual Private Clouds) e redes locais através de um único gateway centralizado. Ele atua como um hub que simplifica a topologia de rede, substituindo a necessidade de múltiplas conexões ponto a ponto entre VPCs.
+Attachment
+vpc peering: puxa um cabo de rede entre uma vpc e outra voc
+peering não suporta trasintividade
+pra eles se falarem precisam estar conectados entre si, não podem usar pontes.
+
+AWS Direct connect
