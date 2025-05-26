@@ -788,3 +788,6 @@ peering não suporta trasintividade
 pra eles se falarem precisam estar conectados entre si, não podem usar pontes.
 
 AWS Direct connect
+26/05
+Polices
+identidade federada, 
