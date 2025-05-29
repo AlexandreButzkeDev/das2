@@ -1,5 +1,5 @@
-# das1
-trabalho das1
+# das2
+trabalho das2
 aula 06/03
  Regiões: As "Cidades" da Nuvem
 O que é? São grandes áreas geográficas (como São Paulo, Tóquio ou Paris) onde a AWS tem vários prédios cheios de computadores (data centers).
@@ -776,6 +776,14 @@ Practical Applications:
 Query: User profile lookups, order history
 
 Scan: Backoffice reports (schedule during low-traffic periods)
+
+05/05/2025
+
++ VPC (Virtual Private Cloud): rede virtual que existe só em uma região, totalmente isolada lá. Dá pra limitar a velocidade do tráfego dentro dela.
+
++ CIDR: tipo a máscara de rede, define o tamanho da rede.
+
++ Subnet pública: recursos nela podem ser acessados pela internet, tanto de dentro pra fora quanto de fora pra dentro.
 
 
 19/05/2025
