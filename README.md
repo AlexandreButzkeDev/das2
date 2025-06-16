@@ -267,5 +267,26 @@ CloudWatch: coleta métricas de serviços AWS atraves de regiões em um reposit�
 EventBridge: barramento de eventos, jeito de monitorar a AWS em tempo real
 
 Custos: cost explorer
-aula 04/06
+aula 05/06
 Auto Scaling: scala baseada na data e tempo, é para cargas de trabalho previsíveis, scala baseada em métricas rastreadas, é para cargas de trabalho moderadamente intensas
+16/06
+Scaling aws databases
+Aurora Cluster: 5x mais rapido que o sql; é um dos bancos mais automatizados; 
+Load balancer: 
+ELB: Distruibuidor de atividades da amazon entre as maquinas do cluster; ela é aberta para rede publica mas tambem pode ser privada; slacalabilidade basica on incoming traffic;
+4 tipos de load balancer; 
+classic load balancer; usa o EC2 OPERA OSI;
+Aplication balacencer; camada 7; diferencia /produto de / clientes;
+Network load balancer; usar tls offloading; ele sabe diferencia tcp de udp: O TCP, ou Transmission Control Protocol, é orientado à conexão, garantindo entrega confiável e ordenada dos dados, enquanto o UDP, ou User Datagram Protocol, é sem conexão e prioriza a velocidade, com entrega não garantida e sem ordem. 
+gateway load balancer: barrar entradas de estranhos; e tambem caso queira utilizar loadbalancer de terceiros.
+Load balancer components:
+TLS certificate: tem prasos de 3 meses, porem são gratuitos;
+DNS lookups:
+
+Route 53: um servidor de dns que traduz ips; ele tem SLA 100%; pode monitorar dcloudwatch alarms; suporta multiplas rotas;
+A IPV4
+AAAA IPCV6
+CNAME: é uma entrada no Sistema de Nomes de Domínio (DNS) que mapeia um nome de domínio (um alias) para outro nome de domínio (o nome canônico ou verdadeiro)
+TXT: PROVA QUE VC DONO DE UM DNS
+mx
+ns: e-mail
