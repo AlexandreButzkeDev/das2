@@ -258,3 +258,14 @@ Conexão direta entre duas VPCs; não é transitivo.
 
 ## 5. AWS Direct Connect  
 Conexão dedicada de alta largura de banda entre sua rede e a AWS.
+02/06
+Monitoramento de recursos
+    motivos de implementação: saude operacional, utilização de recursos, performance da aplicação, segurança
+
+CloudWatch: coleta métricas de serviços AWS atraves de regiões em um repositório de métrica, coleta logs, métricas são gratuitas, logs são pagos, pode criar alarmes para avisar sobre limites atingidos
+
+EventBridge: barramento de eventos, jeito de monitorar a AWS em tempo real
+
+Custos: cost explorer
+aula 04/06
+Auto Scaling: scala baseada na data e tempo, é para cargas de trabalho previsíveis, scala baseada em métricas rastreadas, é para cargas de trabalho moderadamente intensas
