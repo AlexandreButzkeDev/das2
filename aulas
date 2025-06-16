@@ -1,5 +1,5 @@
-# das1
-trabalho das1
+# das2
+trabalho das2
 aula 06/03
  Regiões: As "Cidades" da Nuvem
 O que é? São grandes áreas geográficas (como São Paulo, Tóquio ou Paris) onde a AWS tem vários prédios cheios de computadores (data centers).
@@ -776,3 +776,14 @@ Practical Applications:
 Query: User profile lookups, order history
 
 Scan: Backoffice reports (schedule during low-traffic periods)
+
+Monitoramento de recursos
+    motivos de implementação: saude operacional, utilização de recursos, performance da aplicação, segurança
+
+CloudWatch: coleta métricas de serviços AWS atraves de regiões em um repositório de métrica, coleta logs, métricas são gratuitas, logs são pagos, pode criar alarmes para avisar sobre limites atingidos
+
+EventBridge: barramento de eventos, jeito de monitorar a AWS em tempo real
+
+Custos: cost explorer
+aula 05/06
+Auto Scaling: scala baseada na data e tempo, é para cargas de trabalho previsíveis, scala baseada em métricas rastreadas, é para cargas de trabalho moderadamente intensas
