@@ -39,7 +39,7 @@
 ## 10. Infraestrutura Global  
 **Fatos:** a AWS conta com dezenas de regiões, centenas de zonas de disponibilidade e milhares de Edge Locations, garantindo alta disponibilidade e performance global.
 
----
+
 
 # Aula 27/02
 
@@ -65,7 +65,7 @@
 **O que é?** Tratar servidores e serviços como efêmeros, reproduzíveis a qualquer momento.  
 **Exemplo:** instâncias spot para workloads não críticas, fáceis de recriar se forem interrompidas.
 
----
+
 
 # Aula 10/03
 
@@ -79,7 +79,6 @@ Segurança de usuários e permissões: autenticação multifatorial, políticas 
 - **AWS:** segurança física e infraestrutura de hardware/software gerenciado.  
 - **Cliente:** sistemas operacionais, aplicações, dados e configuração de segurança.
 
----
 
 # Aula 13/03 _(complemento)_
 
@@ -90,7 +89,7 @@ Segurança de usuários e permissões: autenticação multifatorial, políticas 
 ## 6. Acesso Programático  
 **O que é?** Uso de Roles e chaves temporárias para que aplicações/scripts executem ações na AWS sem expor credenciais permanentes.
 
----
+
 
 # Aula 17/03 _(complemento)_
 
@@ -109,7 +108,7 @@ Comparativo entre block storage, file storage e object storage, cada um adequado
 ## 10. Amazon S3  
 Detalhes de funcionamento: namespace global, versionamento, criptografia e políticas de ciclo de vida.
 
----
+
 
 # Aula 24/03
 
@@ -122,7 +121,7 @@ Proteção contra sobregravações, criando novas versões de objetos a cada upl
 ## 3. Cross-Origin Support (CORS)  
 Configuração de compartilhamento controlado entre domínios para aplicações web.
 
----
+
 
 # Aula 27/03
 
@@ -131,7 +130,7 @@ Configuração de compartilhamento controlado entre domínios para aplicações 
 - Custos de transferência de dados  
 - Monitoramento de gastos via AWS Cost Explorer
 
----
+
 
 # Aula 03/04
 
@@ -148,7 +147,7 @@ Serviço de IA que recomenda tipos de instância mais adequados a cada workload.
 - FSx: file shares para Windows  
 - EFS: sistemas de arquivos NFS para Linux, elásticos e compartilhados
 
----
+
 
 # Aula 07/04
 
@@ -169,7 +168,7 @@ Uso gratuito de instâncias elegíveis por 12 meses.
 - Saving Plans: desconto por uso previsto  
 - Spot: aproveita capacidade ociosa, sujeito a interrupções
 
----
+
 
 # Aula 10/04
 
@@ -186,7 +185,7 @@ Soluções sem esquema rígido, orientadas a documentos, grafos ou cache.
 - Aurora: performance 3–5× MySQL/Postgres  
 - Serverless: escala automática, pagando apenas ao rodar
 
----
+
 
 # Aula 17/04
 
@@ -209,7 +208,6 @@ Data warehouse para análises em larga escala.
 ## 6. Outros Bancos AWS  
 DocumentDB, Keyspaces, MemoryDB, Neptune, Timestream, Quantum Ledger
 
----
 
 # Aula 05/05
 
@@ -222,7 +220,6 @@ Máscara de rede que define o tamanho e o alcance da VPC.
 ## 3. Subnet Pública  
 Recursos acessíveis da internet, conforme regras de Security Group e ACL
 
----
 
 # Aula 08/05
 
@@ -240,7 +237,6 @@ Regras de entrada/saída em nível de instância e de subnet.
 ## 4. AWS Network Firewall & VPC Flow Logs  
 Inspeção avançada de tráfego e registro de fluxos de rede para auditoria.
 
----
 
 # Aula 19/05
 
