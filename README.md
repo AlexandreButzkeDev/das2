@@ -290,3 +290,81 @@ CNAME: é uma entrada no Sistema de Nomes de Domínio (DNS) que mapeia um nome d
 TXT: PROVA QUE VC DONO DE UM DNS
 mx
 ns: e-mail
+Aula 26/05/2025
+IAM Groups: criar um role para associar todas as permissões que as pessoas desse grupo devem ter, e depois vincular essas pessoas ao grupo.
+ele sempre vai dar prioridade para negar o acesso, ex: caso tenha 20000 mil acessos e um "deny" ele vai perder seus acessos
+
+RBAC - Role Base Access Control.
+Concedar permissão para os usuarios através de roles para melhor controle de quem acessa oque.
+Toda vez que um usuário assume uma role, ele recebe uma credencial nova e temporária.
+Ao terminas o prazo, pode-se assumir a role novamente, porém a credencial irá ser diferente
+
+AWS Cognito.
+Ele permite acesso usando conta de outras plataformas
+Aula 29/05/2025
+Iriamos criar um Cognito para cirar uma autenticação java
+
+User pool: banco de dados de usuarios e senhas, independente da linguagem, ao invés de ter uma tela de login por exemplo em java, ele leva lá para a aws verifica e depois retorna a resposta, ele faz a autenticação da aplicação, e também a atutenticação para que o seu software se comunique com a AWS
+
+AWS Organization: serviso da aws que permite você gerenciar multiplas contas usando uma extrutura ierarquica, e você ganha desconto por volume
+
+service control polices: politicas de governanca da tua conta da aws, por exemplo se eu tenho carteira de abilitação, mas a policia me impede de dirigir babado, ou seja ela faz a governancia, eu posso dirigir, mas a policia não me deixa dirigir bebado, no caso ela limita de fazer algo fora dela
+
+Police de limite não dão permissão
+Police de grant dão permissão
+
+Criptografia simetrica: tem uma chave só para criptografar e descriptografar
+Criptografia asimetrica: tem duas chaves uma para criptografar e outra para descriptografar
+
+Server side encryption: criptografia dentro da nuvem
+
+AWS Key Management Service(AWS KMS): cofre de chaves e ferrameta de criptografia padrão da AWS, e é baseada em software
+HSMs: igual ao KMS mas as chaves ficam em um servidor fisico ao invés da nuvem
+
+Amazon Detective: detecta comportamentos estranhos na sua conta
+Aula 02/06/2025
+Monitoramento de recursos
+    motivos de implementação: saude operacional, utilização de recursos, performance da aplicação, segurança
+
+CloudWatch: coleta métricas de serviços AWS atraves de regiões em um repositório de métrica, coleta logs, métricas são gratuitas, logs são pagos, pode criar alarmes para avisar sobre limites atingidos
+
+EventBridge: barramento de eventos, jeito de monitorar a AWS em tempo real
+
+Custos: cost explorer
+Aula 05/06/2025
+Auto Scaling: scala baseada na data e tempo, é para cargas de trabalho previsíveis, scala baseada em métricas rastreadas, é para cargas de trabalho moderadamente intensas
+Aula 16/06/2025
+Scaling AWS databases
+Escalando um cluster de Aurora: escala verticalmente mudando o tamanho da instancia de aurora, escala horisontalmente usando aurora auto scaling para gerenciar a leitura de números de replicas
+
+
+Load Balance: distribui trafego entre multiplos alvos em um ou mais zonas abitaveis, pode receber trafego publico ou privado, verifica a saude das maquinas antes de mandar a requisição, scala automático. 
+
+4 tipos de load balancer: 
+    o load balancer classico, você pode usar, mas ele não é mais indicado;
+    application load balancer: camada 7, é o mais utilizado, diferencia produto de cliente;
+    network load balancer: usar tls offloading diferencia tcp de udp, é o segundo mais utilizado;
+    gateway load balancer: é para quando você não quer utilizar o load balancer da AWS;
+
+Load Balancer Componentc: 
+TLS Certificate: são de graça, mas tem que renovar a cada 3 meses
+
+DNS lookups: 
+
+Route 53: um servidor de dns que traduz seu dominio para uma hosted zones, ele tem SLA 100%, pode monitorar dcloudwatch alarms, suporta multiplas rotas
+
+AAAA IPCV6
+CNAME: é uma entrada no sistema de nomes de domínio (DNS) que mapeia um nome de dominio (um alias) para outro nome de dominio (o nome canonico ou verdadeiro)
+TXT: prova que você é dono de um DNS
+MX
+NS: e-mail
+Aula 23/06/2025
+CloudFormation: serviso aws permite que você fassa criação, atualização e exclusão de recursos de forma automatizada, posso criar arquivo "YAML"(usa mesma ideia do python, ele precisa de identação, mas tem menos texto) e arquivo "JSON"(mais verboso e mais fácil de escrever)
+
+Drift detection: permite que você identifique discrepâncias entre o estado atual dos seus recursos AWS implantados e o estado esperado, conforme definido nos seus modelos do CloudFormation
+
+AWS Quick Start: acelerador de criação de produtos e servisos
+
+Cache content: sempre que precisar melhorar a performance do banco, se usa cache por exemplo;
+    ElastiCache: geralmente mais utilizado para banco, se coloca na frente do banco de dados para entregar mais rápido
+    CloudFront: clocar na frente do site para entregar recursos mais rápidos, na frente do LoadBalancer
