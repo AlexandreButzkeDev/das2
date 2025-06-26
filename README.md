@@ -258,38 +258,6 @@ Conexão direta entre duas VPCs; não é transitivo.
 
 ## 5. AWS Direct Connect  
 Conexão dedicada de alta largura de banda entre sua rede e a AWS.
-02/06
-Monitoramento de recursos
-    motivos de implementação: saude operacional, utilização de recursos, performance da aplicação, segurança
-
-CloudWatch: coleta métricas de serviços AWS atraves de regiões em um repositório de métrica, coleta logs, métricas são gratuitas, logs são pagos, pode criar alarmes para avisar sobre limites atingidos
-
-EventBridge: barramento de eventos, jeito de monitorar a AWS em tempo real
-
-Custos: cost explorer
-aula 05/06
-Auto Scaling: scala baseada na data e tempo, é para cargas de trabalho previsíveis, scala baseada em métricas rastreadas, é para cargas de trabalho moderadamente intensas
-16/06
-Scaling aws databases
-Aurora Cluster: 5x mais rapido que o sql; é um dos bancos mais automatizados; 
-Load balancer: 
-ELB: Distruibuidor de atividades da amazon entre as maquinas do cluster; ela é aberta para rede publica mas tambem pode ser privada; slacalabilidade basica on incoming traffic;
-4 tipos de load balancer; 
-classic load balancer; usa o EC2 OPERA OSI;
-Aplication balacencer; camada 7; diferencia /produto de / clientes;
-Network load balancer; usar tls offloading; ele sabe diferencia tcp de udp: O TCP, ou Transmission Control Protocol, é orientado à conexão, garantindo entrega confiável e ordenada dos dados, enquanto o UDP, ou User Datagram Protocol, é sem conexão e prioriza a velocidade, com entrega não garantida e sem ordem. 
-gateway load balancer: barrar entradas de estranhos; e tambem caso queira utilizar loadbalancer de terceiros.
-Load balancer components:
-TLS certificate: tem prasos de 3 meses, porem são gratuitos;
-DNS lookups:
-
-Route 53: um servidor de dns que traduz ips; ele tem SLA 100%; pode monitorar dcloudwatch alarms; suporta multiplas rotas;
-A IPV4
-AAAA IPCV6
-CNAME: é uma entrada no Sistema de Nomes de Domínio (DNS) que mapeia um nome de domínio (um alias) para outro nome de domínio (o nome canônico ou verdadeiro)
-TXT: PROVA QUE VC DONO DE UM DNS
-mx
-ns: e-mail
 Aula 26/05/2025
 IAM Groups: criar um role para associar todas as permissões que as pessoas desse grupo devem ter, e depois vincular essas pessoas ao grupo.
 ele sempre vai dar prioridade para negar o acesso, ex: caso tenha 20000 mil acessos e um "deny" ele vai perder seus acessos
@@ -301,7 +269,7 @@ Ao terminas o prazo, pode-se assumir a role novamente, porém a credencial irá 
 
 AWS Cognito.
 Ele permite acesso usando conta de outras plataformas
-Aula 29/05/2025
+## Aula 29/05/2025
 Iriamos criar um Cognito para cirar uma autenticação java
 
 User pool: banco de dados de usuarios e senhas, independente da linguagem, ao invés de ter uma tela de login por exemplo em java, ele leva lá para a aws verifica e depois retorna a resposta, ele faz a autenticação da aplicação, e também a atutenticação para que o seu software se comunique com a AWS
@@ -322,7 +290,7 @@ AWS Key Management Service(AWS KMS): cofre de chaves e ferrameta de criptografia
 HSMs: igual ao KMS mas as chaves ficam em um servidor fisico ao invés da nuvem
 
 Amazon Detective: detecta comportamentos estranhos na sua conta
-Aula 02/06/2025
+## 02/06
 Monitoramento de recursos
     motivos de implementação: saude operacional, utilização de recursos, performance da aplicação, segurança
 
@@ -331,9 +299,73 @@ CloudWatch: coleta métricas de serviços AWS atraves de regiões em um reposit�
 EventBridge: barramento de eventos, jeito de monitorar a AWS em tempo real
 
 Custos: cost explorer
-Aula 05/06/2025
+## Aula 05/06
 Auto Scaling: scala baseada na data e tempo, é para cargas de trabalho previsíveis, scala baseada em métricas rastreadas, é para cargas de trabalho moderadamente intensas
-Aula 16/06/2025
+## Aula 16/06
+Scaling aws databases
+Aurora Cluster: 5x mais rapido que o sql; é um dos bancos mais automatizados; 
+Load balancer: 
+ELB: Distruibuidor de atividades da amazon entre as maquinas do cluster; ela é aberta para rede publica mas tambem pode ser privada; slacalabilidade basica on incoming traffic;
+4 tipos de load balancer; 
+classic load balancer; usa o EC2 OPERA OSI;
+Aplication balacencer; camada 7; diferencia /produto de / clientes;
+Network load balancer; usar tls offloading; ele sabe diferencia tcp de udp: O TCP, ou Transmission Control Protocol, é orientado à conexão, garantindo entrega confiável e ordenada dos dados, enquanto o UDP, ou User Datagram Protocol, é sem conexão e prioriza a velocidade, com entrega não garantida e sem ordem. 
+gateway load balancer: barrar entradas de estranhos; e tambem caso queira utilizar loadbalancer de terceiros.
+Load balancer components:
+TLS certificate: tem prasos de 3 meses, porem são gratuitos;
+DNS lookups:
+
+Route 53: um servidor de dns que traduz ips; ele tem SLA 100%; pode monitorar dcloudwatch alarms; suporta multiplas rotas;
+A IPV4
+AAAA IPCV6
+CNAME: é uma entrada no Sistema de Nomes de Domínio (DNS) que mapeia um nome de domínio (um alias) para outro nome de domínio (o nome canônico ou verdadeiro)
+TXT: PROVA QUE VC DONO DE UM DNS
+mx
+ns: e-mail
+## Aula 26/05/2025
+IAM Groups: criar um role para associar todas as permissões que as pessoas desse grupo devem ter, e depois vincular essas pessoas ao grupo.
+ele sempre vai dar prioridade para negar o acesso, ex: caso tenha 20000 mil acessos e um "deny" ele vai perder seus acessos
+
+RBAC - Role Base Access Control.
+Concedar permissão para os usuarios através de roles para melhor controle de quem acessa oque.
+Toda vez que um usuário assume uma role, ele recebe uma credencial nova e temporária.
+Ao terminas o prazo, pode-se assumir a role novamente, porém a credencial irá ser diferente
+
+AWS Cognito.
+Ele permite acesso usando conta de outras plataformas
+## Aula 29/05/2025
+Iriamos criar um Cognito para cirar uma autenticação java
+
+User pool: banco de dados de usuarios e senhas, independente da linguagem, ao invés de ter uma tela de login por exemplo em java, ele leva lá para a aws verifica e depois retorna a resposta, ele faz a autenticação da aplicação, e também a atutenticação para que o seu software se comunique com a AWS
+
+AWS Organization: serviso da aws que permite você gerenciar multiplas contas usando uma extrutura ierarquica, e você ganha desconto por volume
+
+service control polices: politicas de governanca da tua conta da aws, por exemplo se eu tenho carteira de abilitação, mas a policia me impede de dirigir babado, ou seja ela faz a governancia, eu posso dirigir, mas a policia não me deixa dirigir bebado, no caso ela limita de fazer algo fora dela
+
+Police de limite não dão permissão
+Police de grant dão permissão
+
+Criptografia simetrica: tem uma chave só para criptografar e descriptografar
+Criptografia asimetrica: tem duas chaves uma para criptografar e outra para descriptografar
+
+Server side encryption: criptografia dentro da nuvem
+
+AWS Key Management Service(AWS KMS): cofre de chaves e ferrameta de criptografia padrão da AWS, e é baseada em software
+HSMs: igual ao KMS mas as chaves ficam em um servidor fisico ao invés da nuvem
+
+Amazon Detective: detecta comportamentos estranhos na sua conta
+## Aula 02/06/2025
+Monitoramento de recursos
+    motivos de implementação: saude operacional, utilização de recursos, performance da aplicação, segurança
+
+CloudWatch: coleta métricas de serviços AWS atraves de regiões em um repositório de métrica, coleta logs, métricas são gratuitas, logs são pagos, pode criar alarmes para avisar sobre limites atingidos
+
+EventBridge: barramento de eventos, jeito de monitorar a AWS em tempo real
+
+Custos: cost explorer
+## Aula 05/06/2025
+Auto Scaling: scala baseada na data e tempo, é para cargas de trabalho previsíveis, scala baseada em métricas rastreadas, é para cargas de trabalho moderadamente intensas
+## Aula 16/06/2025
 Scaling AWS databases
 Escalando um cluster de Aurora: escala verticalmente mudando o tamanho da instancia de aurora, escala horisontalmente usando aurora auto scaling para gerenciar a leitura de números de replicas
 
@@ -358,7 +390,7 @@ CNAME: é uma entrada no sistema de nomes de domínio (DNS) que mapeia um nome d
 TXT: prova que você é dono de um DNS
 MX
 NS: e-mail
-Aula 23/06/2025
+## Aula 23/06/2025
 CloudFormation: serviso aws permite que você fassa criação, atualização e exclusão de recursos de forma automatizada, posso criar arquivo "YAML"(usa mesma ideia do python, ele precisa de identação, mas tem menos texto) e arquivo "JSON"(mais verboso e mais fácil de escrever)
 
 Drift detection: permite que você identifique discrepâncias entre o estado atual dos seus recursos AWS implantados e o estado esperado, conforme definido nos seus modelos do CloudFormation
@@ -368,3 +400,28 @@ AWS Quick Start: acelerador de criação de produtos e servisos
 Cache content: sempre que precisar melhorar a performance do banco, se usa cache por exemplo;
     ElastiCache: geralmente mais utilizado para banco, se coloca na frente do banco de dados para entregar mais rápido
     CloudFront: clocar na frente do site para entregar recursos mais rápidos, na frente do LoadBalancer
+## Aula 26/06 
+Fluxo de uma venda online:
+O sistema não processa tudo de uma vez, mas em etapas assíncronas (com delays entre elas).
+Exemplo:
+Aguarda a nota fiscal ser gerada.
+Aguarda a confirmação do cartão.
+Aguarda o envio pela transportadora.
+Cada etapa ocorre em momentos diferentes, sem bloqueio do processo principal.
+Como o sistema gerencia isso?
+Usando filas para desacoplar os processos.
+Funcionamento:
+O pedido passa de uma fila para outra a cada etapa concluída.
+Exemplo:
+Pedido confirmado → vai para uma fila.
+Outro serviço consome essa fila, executa sua parte (ex: gerar nota fiscal) e envia para a próxima fila.
+Repete até concluir todas as etapas.
+Vantagens das filas:
+Redução de acoplamento: Sistemas não se comunicam diretamente, apenas via filas.
+Escalabilidade: Processos rodam de forma independente e assíncrona.
+Resiliência: Se um serviço falhar, a mensagem fica na fila até ser processada.
+Observação do professor:
+Já implementamos esse modelo em projetos anteriores.
+Filas são um padrão eficiente para operações distribuídas e complexas.
+Publish/subscribe ,messaging:
+vc está escrito em um grupo, onde todos inscritos recebem mensagen atumatica. podendo ter 12 milhoes e meio por topico.
